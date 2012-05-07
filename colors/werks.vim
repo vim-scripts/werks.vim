@@ -1,10 +1,19 @@
 " Vim color file
 " inspired by the desert color scheme by Hans Fugal <hans[AT]fugal[DOT]net>
 " Maintainer:   Bidit Mazumder <biditm[AT]users[DOT]sf[DOT]net>
-" Last Change:  December 5, 2009
+" Last Change:  May 7, 2012
 
 " background
 set background=dark
+if version > 580
+" remove existing highlighting and set the defaults
+    hi clear
+    if exists("syntax_on")
+" load syntax highlighting defaults, if it's enabled
+    syntax reset
+    endif
+endif
+
 let g:colors_name="werks"
 
 
